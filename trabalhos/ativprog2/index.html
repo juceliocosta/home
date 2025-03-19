@@ -44,7 +44,7 @@
                 <option value="solteiro">Solteiro(a)</option>
                 <option value="casado">Casado(a)</option>
                 <option value="divorciado">Divorciado(a)</option>
-                <option value="viuvo">Viúvo(a)</option>
+                <option value="viúvo">Viúvo(a)</option>
             </select>
         </fieldset>
 
@@ -53,6 +53,17 @@
 
             <label for="cep">CEP: </label>
             <input type="text" name="cep" id="cep" required>
+
+            <label for="rua">Tipo de logradouro: </label>
+
+            <input type="radio" id="rua" name="tipo-logradouro" required>
+            <label for="rua">Rua</label>
+
+            <input type="radio" id="avenida" name="tipo-logradouro" required>
+            <label for="avenida">Avenida</label>
+
+            <input type="radio" id="praca" name="tipo-logradouro" required>
+            <label for="praca">Praça</label>
 
             <label for="logradouro">Logradouro: </label>
             <input type="text" name="logradouro" id="logradouro" required>
