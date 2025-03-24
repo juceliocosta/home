@@ -1,0 +1,30 @@
+body {
+    background-color: aliceblue;
+}
+h1 {
+    color: lightblue;
+    background: darkblue;
+    padding: 1em;
+}
+p {
+    color: blue;
+    font-size: 1.5em;
+}
+
+div {
+    background-color: lightgrey;
+    margin: 2em 20%;
+    padding: 2em;
+}
+
+ul {
+    list-style-type: circle;
+    padding: 1.2em;
+    background: white;
+}
+
+li {
+    background-color: lightskyblue;
+    padding: 1em;
+    margin: 0.4em;
+}
