@@ -1,0 +1,44 @@
+.titulo-principal {
+    color: blue;
+    font-size: 32px;
+    text-align: center;
+}
+
+.menu {
+    background-color: #f2f2f2;
+    padding: 10px;
+    
+}
+.link-menu {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.link-menu:hover {
+    background-color: #ddd;
+}
+
+
+.secao-principal {
+    background-color: #e9e9e9;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.subtitulo-secao {
+    color: green;
+}
+
+.paragrafo-secao {
+    font-style: italic;
+}
+
+.rodape {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+

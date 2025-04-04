@@ -1,0 +1,35 @@
+.destaque {
+
+    background-color: lightblue;
+
+    padding: 10px;
+
+    border: 1px solid blue;
+
+    margin-bottom: 20px;
+
+}
+
+.importante {
+
+    background-color: lightgreen;
+
+    padding: 10px;
+
+    border: 1px solid green;
+
+    margin-bottom: 20px;
+
+}
+
+.padrao {
+
+    background-color: lightgray;
+
+    padding: 10px;
+
+    border: 1px solid gray;
+
+    margin-bottom: 20px;
+
+}
