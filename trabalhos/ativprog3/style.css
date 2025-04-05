@@ -1,0 +1,26 @@
+body {
+    background-color: #ddd;
+    color: #444;
+    font-family: Helvetica;
+    line-height: 1.5;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+}
+
+main {
+    background-color: white;
+    margin: 0px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    border-top: #ddd solid 2px;
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    color: rgb(140, 76, 8);
+    margin-top: 5px;
+}
