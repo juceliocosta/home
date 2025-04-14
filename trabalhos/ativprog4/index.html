@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Cadastro de Cliente</h1>
+        <form action="cadastraCliente.php" method="post">
+            
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome: </label>
+                <input class="input-group" type="text" name="nome" id="nome" minlength="2" maxlength="50" autofocus required>
+
+                <label for="email">E-mail: </label>
+                <input class="input-group" type="email" name="email" id="email" required>
+
+                <label for="cpf">CPF: </label>
+                <input class="input-group" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+
+                <label for="idade">Idade: </label>
+                <input class="input-group" type="number" name="idade" id="idade" required min="1" max="150">
+
+                <label for="tel">Telefone: </label>
+                <input class="input-group" type="tel" name="tel" id="tel" required>
+
+                <label for="data">Data de nascimento: </label>
+                <input class="input-group" type="date" name="data" id="data">
+                
+                <label for="sexo">Sexo: </label>
+                <!--
+                <input class="input-group" type="radio" name="sexo" id="masculino" value="Masculino">
+                <label for="masculino">Masculino</label>
+                <input class="input-group" type="radio" name="sexo" id="feminino" value="Feminino">
+                <label for="feminino">Feminino</label>
+                -->
+                <select class="input-group"id="sexo" name="sexo">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+                
+                <label for="estado-civil">Estado civil: </label>
+                <select class="input-group"id="estado-civil" name="estado-civil">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viúvo">Viúvo(a)</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+
+                <label for="cep">CEP: </label>
+                <input class="input-group" type="text" name="cep" id="cep" required>
+                <label for="tipo-logradouro">Tipo de logradouro: </label>
+
+                <!--
+                    <input class="input-group" type="radio" id="rua" name="tipo-logradouro" required>
+                    <label for="rua">Rua</label>
+                    <input class="input-group" type="radio" id="avenida" name="tipo-logradouro" required>
+                    <label for="avenida">Avenida</label>
+                    <input class="input-group" type="radio" id="praca" name="tipo-logradouro" required>
+                    <label for="praca">Praça</label>
+                -->
+                <select class="input-group" id="tipo-logradouro" name="tipo-logradouro">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Rua">Rua</option>
+                    <option value="Avenida">Avenida</option>
+                    <option value="Praca">Praça</option>
+                </select>
+
+                
+                <label for="logradouro">Logradouro: </label>
+                <input class="input-group" type="text" name="logradouro" id="logradouro" required>
+                <label for="bairro">Bairro: </label>
+                <input class="input-group" type="text" name="bairro" id="bairro" required>
+                <label for="cidade">Cidade: </label>
+                <input class="input-group" type="text" name="cidade" id="cidade" required>
+                <label for="estado">Estado: </label>
+                <select class="input-group" id="estado" name="estado">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <input class="input-group" type="text" name="usuario" value="Usuário" hidden disabled>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+
+                <label>Interesses: </label>
+                <!--
+                    <input class="input-group" type="checkbox" id="filmes" name="interesse">
+                    <label for="filmes">Filmes</label>
+                    <input class="input-group" type="checkbox" id="informatica" name="interesse">
+                    <label for="informatica">Informática</label>
+                    <input class="input-group" type="checkbox" id="games" name="interesse">
+                    <label for="games">Games</label>
+                    <input class="input-group" type="checkbox" id="livros" name="interesse">
+                    <label for="livros">Livros</label>
+                    <input class="input-group" type="checkbox" id="roupas" name="interesse">
+                    <label for="roupas">Roupas</label>
+                -->
+                <select class="input-group" name="interesses" id="interesses" multiple size="4">
+                    <option>Filmes</option>
+                    <option>Informática</option>
+                    <option>Games</option>
+                    <option>Livros</option>
+                    <option>Esportes</option>
+                </select>
+                <label for="complemento">Complemento: </label>
+                <textarea class="input-group" name="complemento" id="complemento"></textarea>
+                <label for="anexo">Anexo: </label>
+                <input class="input-group" type="file" name="anexo" id="anexo">
+            </fieldset>
+
+            <input class="input-group" type="hidden" name="dados" id="dados">
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
