@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de HTML e CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quiz de HTML e CSS</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Qual tag HTML é usada para criar um link?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q1" value="a"> a) &lt;link&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" value="b"> b) &lt;a&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" value="c"> c) &lt;href&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" value="d"> d) &lt;url&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Qual propriedade CSS é usada para mudar a cor do texto?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q2" value="a"> a) text-color
+                </div>
+                <div class="option">
+                    <input type="radio" name="q2" value="b"> b) font-color
+                </div>
+                <div class="option">
+                    <input type="radio" name="q2" value="c"> c) color
+                </div>
+                <div class="option">
+                    <input type="radio" name="q2" value="d"> d) text-style
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Qual tag HTML é usada para criar uma lista ordenada?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q3" value="a"> a) &lt;ul&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q3" value="b"> b) &lt;ol&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q3" value="c"> c) &lt;li&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q3" value="d"> d) &lt;list&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Qual propriedade CSS é usada para definir o tamanho da fonte?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q4" value="a"> a) font-size
+                </div>
+                <div class="option">
+                    <input type="radio" name="q4" value="b"> b) text-size
+                </div>
+                <div class="option">
+                    <input type="radio" name="q4" value="c"> c) size
+                </div>
+                <div class="option">
+                    <input type="radio" name="q4" value="d"> d) font-style
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Qual tag HTML é usada para criar um parágrafo?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q5" value="a"> a) &lt;par&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q5" value="b"> b) &lt;p&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q5" value="c"> c) &lt;paragraph&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q5" value="d"> d) &lt;text&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. Qual propriedade CSS é usada para definir uma cor de fundo de um elemento?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q6" value="a"> a) background
+                </div>
+                <div class="option">
+                    <input type="radio" name="q6" value="b"> b) bg-color
+                </div>
+                <div class="option">
+                    <input type="radio" name="q6" value="c"> c) background-color
+                </div>
+                <div class="option">
+                    <input type="radio" name="q6" value="d"> d) color-background
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. Qual tag HTML5 é usada para agrupar campos relacionados em um formulário?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q7" value="a"> a) &lt;fieldset&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q7" value="b"> b) &lt;group&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q7" value="c"> c) &lt;div&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q7" value="d"> d) &lt;section&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. Qual tag HTML5 é usada para criar um campo de seleção de data?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q8" value="a"> a) &lt;input type="date"&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q8" value="b"> b) &lt;date&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q8" value="c"> c) &lt;calendar&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q8" value="d"> d) &lt;input type="calendar"&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. Qual tag HTML é usada para criar um formulário?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q9" value="a"> a) &lt;form&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q9" value="b"> b) &lt;input&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q9" value="c"> c) &lt;submit&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q9" value="d"> d) &lt;field&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. Qual propriedade CSS é usada para definir a largura de um elemento?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q10" value="a"> a) width
+                </div>
+                <div class="option">
+                    <input type="radio" name="q10" value="b"> b) size
+                </div>
+                <div class="option">
+                    <input type="radio" name="q10" value="c"> c) length
+                </div>
+                <div class="option">
+                    <input type="radio" name="q10" value="d"> d) dimension
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>11. Qual tag HTML5 é usada para representar o conteúdo principal de uma página?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q11" value="a"> a) &lt;main&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q11" value="b"> b) &lt;content&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q11" value="c"> c) &lt;body&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q11" value="d"> d) &lt;section&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>12. Qual tag HTML5 é usada para criar um campo de entrada de e-mail com validação?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q12" value="a"> a) &lt;input type="email"&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q12" value="b"> b) &lt;email&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q12" value="c"> c) &lt;input type="text"&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q12" value="d"> d) &lt;mail&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>13. Qual tag HTML é usada para criar uma tabela?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q13" value="a"> a) &lt;table&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q13" value="b"> b) &lt;tab&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q13" value="c"> c) &lt;grid&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q13" value="d"> d) &lt;data&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>14. Qual propriedade CSS é usada para definir o espaçamento entre as letras?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q14" value="a"> a) letter-spacing
+                </div>
+                <div class="option">
+                    <input type="radio" name="q14" value="b"> b) text-spacing
+                </div>
+                <div class="option">
+                    <input type="radio" name="q14" value="c"> c) spacing
+                </div>
+                <div class="option">
+                    <input type="radio" name="q14" value="d"> d) font-spacing
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>15. Qual tag HTML é usada para criar um botão?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q15" value="a"> a) &lt;button&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q15" value="b"> b) &lt;input type="button"&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q15" value="c"> c) &lt;btn&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q15" value="d"> d) &lt;click&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>16. Qual propriedade CSS é usada para definir a margem de um elemento?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q16" value="a"> a) margin
+                </div>
+                <div class="option">
+                    <input type="radio" name="q16" value="b"> b) padding
+                </div>
+                <div class="option">
+                    <input type="radio" name="q16" value="c"> c) space
+                </div>
+                <div class="option">
+                    <input type="radio" name="q16" value="d"> d) border
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>17. Qual tag HTML é usada para criar uma lista não ordenada?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q17" value="a"> a) &lt;ul&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q17" value="b"> b) &lt;ol&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q17" value="c"> c) &lt;li&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q17" value="d"> d) &lt;list&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>18. Qual propriedade CSS é usada para definir o preenchimento interno de um elemento?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q18" value="a"> a) padding
+                </div>
+                <div class="option">
+                    <input type="radio" name="q18" value="b"> b) margin
+                </div>
+                <div class="option">
+                    <input type="radio" name="q18" value="c"> c) space
+                </div>
+                <div class="option">
+                    <input type="radio" name="q18" value="d"> d) border
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>19. Qual tag HTML é usada para criar um campo de entrada de texto?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q19" value="a"> a) &lt;input type="text"&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q19" value="b"> b) &lt;text&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q19" value="c"> c) &lt;textfield&gt;
+                </div>
+                <div class="option">
+                    <input type="radio" name="q19" value="d"> d) &lt;input&gt;
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>20. Qual propriedade CSS é usada para definir a altura de um elemento?</p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q20" value="a"> a) height
+                </div>
+                <div class="option">
+                    <input type="radio" name="q20" value="b"> b) size
+                </div>
+                <div class="option">
+                    <input type="radio" name="q20" value="c"> c) length
+                </div>
+                <div class="option">
+                    <input type="radio" name="q20" value="d"> d) dimension
+                </div>
+            </div>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Verificar Respostas</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "b",
+                q2: "c",
+                q3: "b",
+                q4: "a",
+                q5: "b",
+                q6: "c",
+                q7: "a",
+                q8: "a",
+                q9: "a",
+                q10: "a",
+                q11: "a",
+                q12: "a",
+                q13: "a",
+                q14: "a",
+                q15: "a",
+                q16: "a",
+                q17: "a",
+                q18: "a",
+                q19: "a",
+                q20: "a"
+            };
+
+            const explanations = {
+                q1: "A tag &lt;a&gt; é usada para criar links em HTML. A tag &lt;link&gt; é usada para vincular recursos externos como CSS, &lt;href&gt; é um atributo e &lt;url&gt; não é uma tag HTML válida.",
+                q2: "A propriedade 'color' é usada para definir a cor do texto em CSS. 'text-color' e 'font-color' não são propriedades válidas, e 'text-style' é usada para outros fins.",
+                q3: "A tag &lt;ol&gt; é usada para criar listas ordenadas. &lt;ul&gt; é para listas não ordenadas, &lt;li&gt; é para itens da lista, e &lt;list&gt; não é uma tag HTML válida.",
+                q4: "A propriedade 'font-size' é usada para definir o tamanho da fonte. 'text-size' e 'size' não são propriedades válidas, e 'font-style' é usada para definir o estilo da fonte.",
+                q5: "A tag &lt;p&gt; é usada para criar parágrafos. &lt;par&gt;, &lt;paragraph&gt; e &lt;text&gt; não são tags HTML válidas.",
+                q6: "A propriedade 'background-color' é usada para definir a cor de fundo. 'background' é mais genérica, 'bg-color' não é válida, e 'color-background' não existe.",
+                q7: "A tag &lt;fieldset&gt; é usada para agrupar campos relacionados em formulários. &lt;group&gt; não é uma tag válida, &lt;div&gt; é genérico, e &lt;section&gt; é para seções de conteúdo.",
+                q8: "O &lt;input type='date'&gt; é usado para criar campos de data. &lt;date&gt;, &lt;calendar&gt; e &lt;input type='calendar'&gt; não são tags ou tipos válidos.",
+                q9: "A tag &lt;form&gt; é usada para criar formulários. &lt;input&gt; é para campos individuais, &lt;submit&gt; e &lt;field&gt; não são tags válidas.",
+                q10: "A propriedade 'width' é usada para definir a largura. 'size', 'length' e 'dimension' não são propriedades válidas para largura.",
+                q11: "A tag &lt;main&gt; é usada para o conteúdo principal. &lt;content&gt; não é uma tag válida, &lt;body&gt; é para todo o conteúdo, e &lt;section&gt; é para seções.",
+                q12: "O &lt;input type='email'&gt; é usado para campos de e-mail com validação. &lt;email&gt; e &lt;mail&gt; não são tags válidas, e &lt;input type='text'&gt; não valida e-mails.",
+                q13: "A tag &lt;table&gt; é usada para criar tabelas. &lt;tab&gt;, &lt;grid&gt; e &lt;data&gt; não são tags HTML válidas.",
+                q14: "A propriedade 'letter-spacing' é usada para espaçamento entre letras. 'text-spacing', 'spacing' e 'font-spacing' não são propriedades válidas.",
+                q15: "A tag &lt;button&gt; é usada para criar botões. &lt;input type='button'&gt; é uma alternativa, mas &lt;btn&gt; e &lt;click&gt; não são tags válidas.",
+                q16: "A propriedade 'margin' é usada para definir margens. 'padding' é para preenchimento interno, 'space' não é válida, e 'border' é para bordas.",
+                q17: "A tag &lt;ul&gt; é usada para listas não ordenadas. &lt;ol&gt; é para listas ordenadas, &lt;li&gt; é para itens, e &lt;list&gt; não é uma tag válida.",
+                q18: "A propriedade 'padding' é usada para preenchimento interno. 'margin' é para margens externas, 'space' não é válida, e 'border' é para bordas.",
+                q19: "O &lt;input type='text'&gt; é usado para campos de texto. &lt;text&gt; e &lt;textfield&gt; não são tags válidas, e &lt;input&gt; sem type não é específico.",
+                q20: "A propriedade 'height' é usada para definir altura. 'size', 'length' e 'dimension' não são propriedades válidas para altura."
+            };
+
+            let score = 0;
+            let resultHTML = "<h2>Resultado:</h2>";
+
+            for (let i = 1; i <= 20; i++) {
+                const questionName = "q" + i;
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswers[questionName]) {
+                        score++;
+                        resultHTML += `<p class="correct">Questão ${i}: Correto!</p>`;
+                    } else {
+                        resultHTML += `<p class="incorrect">Questão ${i}: Incorreto. ${explanations[questionName]}</p>`;
+                    }
+                } else {
+                    resultHTML += `<p class="incorrect">Questão ${i}: Não respondida. ${explanations[questionName]}</p>`;
+                }
+            }
+
+            resultHTML += `<p>Pontuação final: ${score}/20</p>`;
+            document.getElementById("result").innerHTML = resultHTML;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
