@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Sistemas Operacionais — Tanenbaum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        .questao {
+            margin-bottom: 15px;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quiz — Sistemas Operacionais Modernos</h1>
+
+    <form id="quizForm">
+
+        <!-- Capítulo 1 -->
+        <h2>Capítulo 1</h2>
+        <div class="questao">
+            <p>1️⃣ O que é um sistema operacional?</p>
+            <label><input type="radio" name="q1" value="b"> Um software intermediário que gerencia hardware e
+                recursos</label><br>
+            <label><input type="radio" name="q1" value="a"> Um aplicativo de usuário</label><br>
+            <label><input type="radio" name="q1" value="c"> Um driver de dispositivo</label>
+        </div>
+        <div class="questao">
+            <p>2️⃣ Qual a função de um sistema operacional como máquina estendida?</p>
+            <label><input type="radio" name="q2" value="a"> Gerenciar diretamente o hardware</label><br>
+            <label><input type="radio" name="q2" value="b"> Fornecer abstrações mais simples para o hardware</label><br>
+            <label><input type="radio" name="q2" value="c"> Compilar programas de usuário</label>
+        </div>
+        <div class="questao">
+            <p>3️⃣ Qual a diferença entre modo usuário e modo núcleo?</p>
+            <label><input type="radio" name="q3" value="a"> No modo usuário, o programa tem acesso a todo
+                hardware</label><br>
+            <label><input type="radio" name="q3" value="b"> No modo núcleo, o sistema operacional controla totalmente o
+                hardware</label><br>
+            <label><input type="radio" name="q3" value="c"> Ambos modos são iguais</label>
+        </div>
+        <div class="questao">
+            <p>4️⃣ O que caracteriza um sistema multiprogramado?</p>
+            <label><input type="radio" name="q4" value="a"> Executa apenas um programa por vez</label><br>
+            <label><input type="radio" name="q4" value="b"> Permite vários programas na memória ao mesmo
+                tempo</label><br>
+            <label><input type="radio" name="q4" value="c"> Não possui gerenciamento de memória</label>
+        </div>
+        <div class="questao">
+            <p>5️⃣ Quem são os principais clientes do sistema operacional?</p>
+            <label><input type="radio" name="q5" value="a"> O hardware</label><br>
+            <label><input type="radio" name="q5" value="b"> Os programas aplicativos</label><br>
+            <label><input type="radio" name="q5" value="c"> O compilador</label>
+        </div>
+
+        <!-- Capítulo 2 -->
+        <h2>Capítulo 2</h2>
+        <div class="questao">
+            <p>6️⃣ O que é um processo?</p>
+            <label><input type="radio" name="q6" value="a"> Um programa armazenado em disco</label><br>
+            <label><input type="radio" name="q6" value="b"> Um programa em execução</label><br>
+            <label><input type="radio" name="q6" value="c"> Um arquivo temporário</label>
+        </div>
+        <div class="questao">
+            <p>7️⃣ O que é uma thread?</p>
+            <label><input type="radio" name="q7" value="a"> A menor unidade de execução de um processo</label><br>
+            <label><input type="radio" name="q7" value="b"> Um driver de E/S</label><br>
+            <label><input type="radio" name="q7" value="c"> Um processo completo</label>
+        </div>
+        <div class="questao">
+            <p>8️⃣ O que é exclusão mútua?</p>
+            <label><input type="radio" name="q8" value="a"> Permitir que vários processos acessem simultaneamente uma
+                região crítica</label><br>
+            <label><input type="radio" name="q8" value="b"> Impedir que mais de um processo entre na região crítica ao
+                mesmo tempo</label><br>
+            <label><input type="radio" name="q8" value="c"> Eliminar o uso de memória compartilhada</label>
+        </div>
+        <div class="questao">
+            <p>9️⃣ Qual dessas é uma técnica de sincronização entre processos?</p>
+            <label><input type="radio" name="q9" value="a"> Buffer</label><br>
+            <label><input type="radio" name="q9" value="b"> Semáforo</label><br>
+            <label><input type="radio" name="q9" value="c"> Monitor de tela</label>
+        </div>
+        <div class="questao">
+            <p>🔟 O que caracteriza o escalonamento preemptivo?</p>
+            <label><input type="radio" name="q10" value="a"> Um processo executa até terminar
+                voluntariamente</label><br>
+            <label><input type="radio" name="q10" value="b"> O sistema operacional pode interromper o processo a
+                qualquer momento</label><br>
+            <label><input type="radio" name="q10" value="c"> Não há escalonamento no sistema</label>
+        </div>
+
+        <h2>Capítulo 3</h2>
+        <div class="questao">
+            <p>1️⃣1️⃣ O que é memória virtual?</p>
+            <label><input type="radio" name="q11" value="a"> Memória usada apenas pela CPU</label><br>
+            <label><input type="radio" name="q11" value="b"> Técnica que permite usar mais memória que a física
+                disponível</label><br>
+            <label><input type="radio" name="q11" value="c"> Memória cache da CPU</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣2️⃣ O que é paginação?</p>
+            <label><input type="radio" name="q12" value="a"> Divisão da memória em blocos fixos chamados
+                páginas</label><br>
+            <label><input type="radio" name="q12" value="b"> Organização sequencial dos processos</label><br>
+            <label><input type="radio" name="q12" value="c"> Transferência de arquivos para disco</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣3️⃣ O que é swapping?</p>
+            <label><input type="radio" name="q13" value="a"> Troca de processos entre memória e disco</label><br>
+            <label><input type="radio" name="q13" value="b"> Impressão de dados</label><br>
+            <label><input type="radio" name="q13" value="c"> Compressão de arquivos</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣4️⃣ Qual algoritmo de substituição de página é mais eficiente teoricamente?</p>
+            <label><input type="radio" name="q14" value="a"> FIFO</label><br>
+            <label><input type="radio" name="q14" value="b"> Ótimo</label><br>
+            <label><input type="radio" name="q14" value="c"> LRU</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣5️⃣ O que caracteriza a segmentação?</p>
+            <label><input type="radio" name="q15" value="a"> Divisão do espaço de endereçamento em segmentos
+                variáveis</label><br>
+            <label><input type="radio" name="q15" value="b"> Uso de tamanhos fixos para armazenamento</label><br>
+            <label><input type="radio" name="q15" value="c"> Ignorar a divisão de memória</label>
+        </div>
+
+        <h2>Capítulo 4</h2>
+        <div class="questao">
+            <p>1️⃣6️⃣ O que é um arquivo?</p>
+            <label><input type="radio" name="q16" value="a"> Um programa em execução</label><br>
+            <label><input type="radio" name="q16" value="b"> Um conjunto de informações armazenadas em disco</label><br>
+            <label><input type="radio" name="q16" value="c"> Uma entrada de rede</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣7️⃣ O que é um diretório?</p>
+            <label><input type="radio" name="q17" value="a"> Um arquivo especial que contém referências a
+                arquivos</label><br>
+            <label><input type="radio" name="q17" value="b"> Um arquivo executável</label><br>
+            <label><input type="radio" name="q17" value="c"> Um processo de rede</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣8️⃣ O que é journaling em sistemas de arquivos?</p>
+            <label><input type="radio" name="q18" value="a"> Gravação contínua de arquivos</label><br>
+            <label><input type="radio" name="q18" value="b"> Registro de operações antes de efetivar
+                alterações</label><br>
+            <label><input type="radio" name="q18" value="c"> Exclusão automática de arquivos antigos</label>
+        </div>
+        <div class="questao">
+            <p>1️⃣9️⃣ O que permite nomes de caminhos?</p>
+            <label><input type="radio" name="q19" value="a"> Identificar um arquivo pela sua localização no sistema de
+                diretórios</label><br>
+            <label><input type="radio" name="q19" value="b"> Executar arquivos diretamente</label><br>
+            <label><input type="radio" name="q19" value="c"> Carregar arquivos para memória RAM</label>
+        </div>
+        <div class="questao">
+            <p>2️⃣0️⃣ Qual o objetivo de um sistema de arquivos virtual (VFS)?</p>
+            <label><input type="radio" name="q20" value="a"> Permitir diferentes sistemas de arquivos sob uma interface
+                única</label><br>
+            <label><input type="radio" name="q20" value="b"> Substituir hardware antigo</label><br>
+            <label><input type="radio" name="q20" value="c"> Instalar aplicativos automaticamente</label>
+        </div>
+
+        <!-- Capítulo 5 -->
+        <h2>Capítulo 5</h2>
+        <div class="questao">
+            <p>2️⃣1️⃣ O que é DMA (Direct Memory Access)?</p>
+            <label><input type="radio" name="q21" value="a"> Um software de backup</label><br>
+            <label><input type="radio" name="q21" value="b"> Método de transferência direta entre dispositivo e
+                memória</label><br>
+            <label><input type="radio" name="q21" value="c"> Um driver de vídeo</label>
+        </div>
+        <div class="questao">
+            <p>2️⃣2️⃣ O que é polling?</p>
+            <label><input type="radio" name="q22" value="a"> Verificar periodicamente o status de um
+                dispositivo</label><br>
+            <label><input type="radio" name="q22" value="b"> Transferir dados diretamente para RAM</label><br>
+            <label><input type="radio" name="q22" value="c"> Proteger um arquivo de exclusão</label>
+        </div>
+        <div class="questao">
+            <p>2️⃣3️⃣ Qual o objetivo de um driver de dispositivo?</p>
+            <label><input type="radio" name="q23" value="a"> Gerenciar aplicativos de usuário</label><br>
+            <label><input type="radio" name="q23" value="b"> Fazer a interface entre hardware e sistema
+                operacional</label><br>
+            <label><input type="radio" name="q23" value="c"> Aumentar a velocidade do processador</label>
+        </div>
+        <div class="questao">
+            <p>2️⃣4️⃣ Qual das opções é um tipo de E/S?</p>
+            <label><input type="radio" name="q24" value="a"> E/S programada</label><br>
+            <label><input type="radio" name="q24" value="b"> Armazenamento direto</label><br>
+            <label><input type="radio" name="q24" value="c"> Processamento paralelo</label>
+        </div>
+        <div class="questao">
+            <p>2️⃣5️⃣ O que faz o escalonamento de disco?</p>
+            <label><input type="radio" name="q25" value="a"> Define a ordem de atendimento das requisições de
+                leitura/gravação</label><br>
+            <label><input type="radio" name="q25" value="b"> Formata discos automaticamente</label><br>
+            <label><input type="radio" name="q25" value="c"> Cria partições no disco rígido</label>
+        </div>
+    </form>
+    <button type="button" onclick="corrigir()">Enviar Respostas</button>
+    <div id="resultado" class="resultado"></div>
+
+    <script>
+        function corrigir() {
+            const respostas = {
+                q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b',
+                q6: 'b', q7: 'a', q8: 'b', q9: 'b', q10: 'b',
+                q11: 'b', q12: 'a', q13: 'a', q14: 'b', q15: 'a',
+                q16: 'b', q17: 'a', q18: 'b', q19: 'a', q20: 'a',
+                q21: 'b', q22: 'a', q23: 'b', q24: 'a', q25: 'a'
+            };
+
+            const explicacoes = {
+                q1: 'Um sistema operacional gerencia recursos e oferece uma interface para os aplicativos.',
+                q2: 'Como máquina estendida, o SO abstrai o hardware, fornecendo serviços mais simples.',
+                q3: 'Modo núcleo tem controle total sobre hardware; modo usuário é limitado.',
+                q4: 'Um sistema multiprogramado mantém vários programas na memória.',
+                q5: 'Os programas aplicativos são os principais clientes do SO.',
+                q6: 'Processo é um programa em execução, não apenas armazenado.',
+                q7: 'Thread é a menor unidade de execução de um processo.',
+                q8: 'Exclusão mútua impede acesso simultâneo a regiões críticas.',
+                q9: 'Semáforo é técnica clássica de sincronização.',
+                q10: 'No escalonamento preemptivo o SO pode interromper processos.',
+                q11: 'Memória virtual permite usar mais espaço que a memória física disponível.',
+                q12: 'Paginação divide memória em blocos fixos chamados páginas.',
+                q13: 'Swapping move processos entre memória e disco.',
+                q14: 'O algoritmo ótimo substitui a página que será usada mais tarde.',
+                q15: 'Segmentação divide a memória em segmentos variáveis.',
+                q16: 'Arquivo é um conjunto de informações armazenadas.',
+                q17: 'Diretório contém referências a arquivos.',
+                q18: 'Journaling registra operações antes de aplicá-las.',
+                q19: 'Nomes de caminho identificam arquivos por localização.',
+                q20: 'VFS permite diferentes sistemas de arquivos sob interface única.',
+                q21: 'DMA transfere dados entre dispositivo e memória sem CPU.',
+                q22: 'Polling verifica dispositivo periodicamente.',
+                q23: 'Drivers fazem interface entre hardware e SO.',
+                q24: 'E/S programada é tipo clássico de entrada/saída.',
+                q25: 'Escalonamento de disco define ordem de atendimento de requisições.'
+            };
+
+            let acertos = 0, total = Object.keys(respostas).length;
+            let feedback = '';
+
+            for (let q in respostas) {
+                const sel = document.querySelector('input[name="' + q + '"]:checked');
+                if (sel) {
+                    if (sel.value === respostas[q]) {
+                        acertos++;
+                        feedback += `<p>✅ Questão ${q.slice(1)} correta. ${explicacoes[q]}</p>`;
+                    } else {
+                        feedback += `<p>❌ Questão ${q.slice(1)} errada. Resposta correta: "${respostas[q]}". ${explicacoes[q]}</p>`;
+                    }
+                } else {
+                    feedback += `<p>⚠️ Questão ${q.slice(1)} não respondida. ${explicacoes[q]}</p>`;
+                }
+            }
+
+            document.getElementById('resultado').innerHTML = `<h3>Você acertou ${acertos}/${total}</h3>` + feedback;
+        }
+    </script>
+</body>
+
+</html>

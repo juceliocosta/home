@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Ambiente Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .next-button {
+            background-color: #2196F3;
+        }
+
+        .next-button:hover {
+            background-color: #1976D2;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ATIVIDADE 1 - ATENDE AO OBJETIVO 1</h2>
+
+    <div class="question">
+        <p>1. Marque as opções que estão relacionadas aos elementos caracterizadores da Educação a Distância:</p>
+        <div class="options">
+            <div class="option">
+                <input type="checkbox" name="q1" value="a"> Separação física e geográfica entre aluno e professor.
+            </div>
+            <div class="option">
+                <input type="checkbox" name="q1" value="b"> Predomínio de atividades expositivas.
+            </div>
+            <div class="option">
+                <input type="checkbox" name="q1" value="c"> O professor atende os alunos em horários fixos e na sala de
+                aula.
+            </div>
+            <div class="option">
+                <input type="checkbox" name="q1" value="d"> O ritmo de aprendizado é determinado pelo estudante.
+            </div>
+            <div class="option">
+                <input type="checkbox" name="q1" value="e"> Processo de ensino-aprendizagem centrado no professor.
+            </div>
+            <div class="option">
+                <input type="checkbox" name="q1" value="f"> Processo de ensino-aprendizagem centrado no estudante.
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. Considerando as definições de Educação a Distância de acordo com diferentes autores, qual delas pode ser
+            considerada incorreta?</p>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q2" value="a"> É o processo de ensino-aprendizagem quando professores e
+                estudantes não estão normalmente juntos fisicamente, mas podem estar conectados, interligados por
+                tecnologias.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="b"> Educação/Ensino a Distância é um método racional de partilhar
+                conhecimento, habilidades e atitudes, através da aplicação da divisão do trabalho e de princípios
+                organizacionais.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="c"> Em EAD, se reconhece a capacidade do estudante para construir
+                seu conhecimento e ser ator e autor de suas práticas e reflexões.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="d"> Em EAD, os estudantes não estão fisicamente no mesmo lugar, mas
+                devem, necessariamente, participar todos ao mesmo tempo das atividades.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="e"> Educação a Distância é uma forma de ensino que possibilita a
+                auto-aprendizagem, com a mediação de recursos didáticos sistematicamente organizados e apresentados em
+                diferentes suportes de informação. São utilizados isoladamente ou combinados e veiculados pelos
+                diferentes meios de comunicação.
+            </div>
+        </div>
+    </div>
+
+    <h2>ATIVIDADE 2 - ATENDE AO OBJETIVO 2</h2>
+    <div class="question">
+        <div>
+            <p>1. Você deverá criar um novo conceito para EAD a partir das leituras
+                feitas até aqui. Se precisar, volte a ler o texto que foi sugerido!
+                O conceito deverá contemplar os principais elementos que
+                caracterizam a EAD.</p>
+
+            <textarea name="" id="a2" style="width: 100%; height: 100px;">
+            </textarea>
+        </div>
+    </div>
+
+    <button onclick="checkAnswers()">Verificar Respostas</button>
+    <button class="next-button" onclick="window.location.href='form2.html'">Próximo Formulário</button>
+    <div id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+
+            // Verificar questão 1 (checkboxes)
+            const q1Answers = Array.from(document.getElementsByName('q1'))
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+
+            // Respostas corretas da questão 1
+            const correctQ1 = ['a', 'd', 'f']; // Separação física, ritmo do estudante, processo centrado no estudante
+
+            // Verificar questão 2 (radio)
+            const q2Answer = document.querySelector('input[name="q2"]:checked')?.value;
+
+            let html = '<h3>Resultados:</h3>';
+
+            // Avaliar questão 1
+            const q1Correct = correctQ1.every(a => q1Answers.includes(a)) &&
+                q1Answers.length === correctQ1.length;
+
+            html += `<p class="${q1Correct ? 'correct' : 'incorrect'}">
+                Questão 1: ${q1Correct ? 'Correta' : 'Incorreta'}<br>
+                Respostas corretas: <br>- Separação física e geográfica entre aluno e professor,<br> 
+                - O ritmo de aprendizado é determinado pelo estudante,<br> 
+                - Processo de ensino-aprendizagem centrado no estudante
+            </p>`;
+
+            // Avaliar questão 2
+            const q2Correct = q2Answer === 'd';
+
+            html += `<p class="${q2Correct ? 'correct' : 'incorrect'}">
+                Questão 2: ${q2Correct ? 'Correta' : 'Incorreta'}<br>
+                Resposta correta: <br>- Em EAD, os estudantes não estão fisicamente no mesmo lugar, 
+                mas devem, necessariamente, participar todos ao mesmo tempo das atividades.
+            </p>`;
+
+            resultDiv.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

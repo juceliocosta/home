@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Ambiente Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .next-button {
+            background-color: #2196F3;
+        }
+
+        .next-button:hover {
+            background-color: #1976D2;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ATIVIDADE 3 - ATENDE AO OBJETIVO 3</h2>
+
+    <div class="question">
+        <p>A educação a distância (EAD) tem a idade da escrita, uma vez que, desde a invenção desta, a comunicação
+            liberta-se no tempo e no espaço.</p>
+        <p>A seguir são apresentadas duas afirmativas (A e B), ambas relacionadas à educação a distância:</p>
+        <ul>
+            <li>Afirmativa A - As primeiras manifestações escritas foram os desenhos, geralmente feitos em pedras, os
+                quais procuravam copiar ou imitar objetos. Ao desenhar em paredes de pedra, o homem das cavernas já
+                estava exercitando a comunicação a distância.</li>
+            <li>Afirmativa B - A educação a distância tornou-se possível apenas com a invenção da imprensa no século
+                XIV.</li>
+        </ul>
+        <p>Com base na análise das duas afirmativas, pode-se afirmar que:</p>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q1" value="a"> A afirmativa A é verdadeira e a B é falsa.
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" value="b"> A afirmativa A é falsa e a B é verdadeira.
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" value="c"> Ambas as afirmativas são falsas.
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" value="d"> Ambas as afirmativas são verdadeiras e a afirmativa A justifica
+                a B.
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Com base na interpretação de que a EAD nasce mais recentemente, considera-se que sua história se divide em
+            gerações. Identifique a alternativa correta.</p>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q2" value="a"> A primeira geração é a geração do ensino pela escrita.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="b"> A segunda geração é a geração da imprensa.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="c"> A primeira geração é do ensino por correspondência.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="d"> A segunda geração é do ensino por correspondência.
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Leia o trecho seguinte e assinale a alternativa correta em relação à geração da EAD correspondente:</p>
+        <p>Essa geração é marcada pelo início da transmissão via satélite e da conjugação de áudio e vídeo,
+            possibilitando compactar e acessar informações de forma mais dinâmica, como com a utilização de fitas
+            cassete.</p>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q3" value="a"> Primeira geração.
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="b"> Segunda geração.
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="c"> Terceira geração.
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="d"> Quarta geração.
+            </div>
+        </div>
+    </div>
+
+    <button onclick="checkAnswers()">Verificar Respostas</button>
+    <button class="next-button" onclick="window.location.href='form4.html'">Próximo Formulário</button>
+    <div id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+
+            const q1Answer = document.querySelector('input[name="q1"]:checked')?.value;
+            const q2Answer = document.querySelector('input[name="q2"]:checked')?.value;
+            const q3Answer = document.querySelector('input[name="q3"]:checked')?.value;
+
+            const correctQ1 = 'a';
+            const correctQ2 = 'c';
+            const correctQ3 = 'c';
+
+            let html = '<h3>Resultados:</h3>';
+
+            const q1Correct = q1Answer === correctQ1;
+            const q2Correct = q2Answer === correctQ2;
+            const q3Correct = q3Answer === correctQ3;
+
+            html += `<p class="${q1Correct ? 'correct' : 'incorrect'}">
+                Questão 1: ${q1Correct ? 'Correta' : 'Incorreta'}<br>
+                Resposta correta: A afirmativa A é verdadeira e a B é falsa.
+            </p>`;
+
+            html += `<p class="${q2Correct ? 'correct' : 'incorrect'}">
+                Questão 2: ${q2Correct ? 'Correta' : 'Incorreta'}<br>
+                Resposta correta: A primeira geração é do ensino por correspondência.
+            </p>`;
+
+            html += `<p class="${q3Correct ? 'correct' : 'incorrect'}">
+                Questão 3: ${q3Correct ? 'Correta' : 'Incorreta'}<br>
+                Resposta correta: Terceira geração.
+            </p>`;
+
+            resultDiv.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

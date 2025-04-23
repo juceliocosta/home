@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Ambiente Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .next-button {
+            background-color: #2196F3;
+        }
+
+        .next-button:hover {
+            background-color: #1976D2;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            min-height: 100px;
+        }
+
+        .checkbox-option {
+            margin: 10px 0;
+        }
+
+        .research-activity {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ATIVIDADE 4 - ATENDE AO OBJETIVO 4</h2>
+
+    <div class="question">
+        <p><strong>QUESTÃO 1.</strong></p>
+        <p>A mediação como prática pedagógica, executada com compromisso e responsabilidade, concebe ao aluno, uma
+            educação transformadora. A função do professor mediador corresponde a vigiar e aconselhar, corrigir e
+            ensinar, estabelecendo uma relação vertical professor/aluno, impossibilitando assim qualquer espaço que o
+            aluno possa explicitar o seu modo de entender o mundo.</p>
+        <p>Você concorda com essa afirmação? Justifique sua resposta.</p>
+        <textarea id="q1" placeholder="Digite sua resposta aqui..."></textarea>
+    </div>
+
+    <div class="question">
+        <p><strong>QUESTÃO 2</strong></p>
+        <p>Em relação ao planejamento e à organização de um sistema de EAD, marque as caixinhas para as afirmativas
+            verdadeiras</p>
+        <div class="options">
+            <div class="checkbox-option">
+                <input type="checkbox" name="q2a" value="V">Somente para cursos presenciais é necessário elaborar
+                uma proposta pedagógica de curso, uma vez que as práticas educacionais podem ser avaliadas no cotidiano
+                da instituição.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q2b" value="V">Assim como na modalidade presencial, a definição clara
+                dos objetivos, do público-alvo e dos mecanismos de avaliação é fundamental para o bom andamento de um
+                curso a distância.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q2c" value="F">O Projeto Pedagógico é o instrumento de referência
+                somente dos cursos presenciais.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q2d" value="F">Na construção do Projeto Pedagógico, quanto menos
+                pessoas envolvidas, melhor a qualidade dele.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q2e" value="V">O bom planejamento educacional para cursos na
+                modalidade a distância é aquele que consegue aliar a teoria à prática.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q2f" value="F">Para cursos a distância não é necessário fazer
+                diagnóstico da realidade dos alunos porque a característica dessa modalidade é o público heterogêneo.
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p><strong>QUESTÃO 3</strong></p>
+        <p>Com relação às entradas e saídas de um sistema de EAD, marque as caixinhas para as Entradas e deixe
+            desmarcadas para as Saídas:</p>
+        <div class="options">
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3a" value="S"> Índices de satisfação do aluno.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3b" value="S"> Resultados apresentados pelos alunos.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3c" value="E"> Experiência do professor/tutor em EAD.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3d" value="E"> Qualidade das aptidões para a elaboração do curso.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3e" value="S"> Qualidade da produção do curso.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3f" value="E"> Tecnologia escolhida para o curso.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3g" value="S"> Freqüência e qualidade dos dados de avaliação.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3h" value="E"> Número total de matrículas.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3i" value="S"> Avaliações de qualidade.
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" name="q3j" value="S"> Resultados de certificação.
+            </div>
+        </div>
+    </div>
+
+    <div class="research-activity">
+        <h3>ATIVIDADES DE PESQUISA</h3>
+        <p>Em diversas instituições que atuam com educação, encontramos a figura do monitor. De acordo com Moraes
+            (2006), o monitor aparece como responsável em acompanhar e motivar constantemente o estudante, oferecendo
+            apoio técnico aos professores.</p>
+        <p>Qual a opinião de vocês quanto a presença da figura do monitor na EAD? Existe? É necessária? O que muda em
+            relação ao tutor?</p>
+        <textarea id="research" placeholder="Digite sua resposta aqui..."></textarea>
+    </div>
+
+    <button onclick="checkAnswers()">Verificar Respostas</button>
+    <!--<button class="next-button" onclick="window.location.href='form5.html'">Próximo Formulário</button>-->
+    <div id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+
+            let html = '<h3>Resultados:</h3>';
+
+            // Mostrar respostas corretas da questão 2
+            html += `<p class="correct">
+                Questão 2: As respostas corretas são: ...
+            </p>`;
+
+            // Mostrar respostas corretas da questão 3
+            html += `<p class="correct">
+                Questão 3: As respostas corretas são: ...
+            </p>`;
+
+            // Questão 1 e Atividade de Pesquisa são dissertativas
+            html += `<p>Questão 1 e Atividade de Pesquisa: Estas questões são dissertativas e requerem análise individual.</p>`;
+
+            resultDiv.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário EAD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .questao {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .opcao label {
+            margin-left: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        input[type="number"] {
+            width: 50px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .next-button {
+            background-color: #2196F3;
+        }
+
+        .next-button:hover {
+            background-color: #1976D2;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ordene as Gerações de EAD</h1>
+    <p>Ordene de 1 (primeira) a 5 (última) as gerações de EAD conforme elas foram surgindo:</p>
+
+    <div class="questao">
+        <div class="opcao">
+            <input type="number" id="universidades_abertas" min="1" max="5">
+            <label for="universidades_abertas">Universidades Abertas</label>
+        </div>
+        <div class="opcao">
+            <input type="number" id="aulas_virtuais" min="1" max="5">
+            <label for="aulas_virtuais">Aulas virtuais baseadas no computador e na internet</label>
+        </div>
+        <div class="opcao">
+            <input type="number" id="imprensa_correios" min="1" max="5">
+            <label for="imprensa_correios">Imprensa e Correios</label>
+        </div>
+        <div class="opcao">
+            <input type="number" id="teleconferencias" min="1" max="5">
+            <label for="teleconferencias">Teleconferências por áudio, vídeo e computador</label>
+        </div>
+        <div class="opcao">
+            <input type="number" id="radio_tv" min="1" max="5">
+            <label for="radio_tv">Difusão de rádio e TV</label>
+        </div>
+    </div>
+
+    <button onclick="verificarRespostas()">Verificar Respostas</button>
+    <button class="next-button" onclick="window.location.href='form3.html'">Próximo Formulário</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function verificarRespostas() {
+            const respostas = {
+                universidades_abertas: document.getElementById("universidades_abertas").value,
+                aulas_virtuais: document.getElementById("aulas_virtuais").value,
+                imprensa_correios: document.getElementById("imprensa_correios").value,
+                teleconferencias: document.getElementById("teleconferencias").value,
+                radio_tv: document.getElementById("radio_tv").value
+            };
+
+            const respostaCorreta = {
+                imprensa_correios: "1",
+                radio_tv: "2",
+                teleconferencias: "3",
+                universidades_abertas: "4",
+                aulas_virtuais: "5"
+            };
+
+            let feedback = "";
+            let todasCorretas = true;
+
+            for (const [chave, valor] of Object.entries(respostas)) {
+                const label = document.querySelector(`label[for="${chave}"]`).textContent;
+                if (valor === respostaCorreta[chave]) {
+                    feedback += `✅ ${label}: Correto (Sua resposta: ${valor})\n`;
+                } else if (valor === "") {
+                    feedback += `⚠️ ${label}: Você não respondeu.\n`;
+                    todasCorretas = false;
+                } else {
+                    feedback += `❌ ${label}: Incorreto (Sua resposta: ${valor}, Correto seria: ${respostaCorreta[chave]})\n`;
+                    todasCorretas = false;
+                }
+            }
+
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerText = feedback;
+
+            if (todasCorretas && Object.values(respostas).every(v => v !== "")) {
+                resultadoDiv.innerText += "\nParabéns! Você ordenou todas as gerações corretamente.";
+            } else if (Object.values(respostas).every(v => v !== "")) {
+                resultadoDiv.innerText += "\nTente novamente para ordenar corretamente todas as gerações.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
