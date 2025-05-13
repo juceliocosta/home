@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operacionais - Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .AI {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .aula {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        .pergunta {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .resposta {
+            margin-left: 20px;
+            color: #34495e;
+        }
+
+        .destaque {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 10px 0;
+        }
+
+        code {
+            display: block;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .AI {
+                order: -1;
+            }
+        }
+
+        .gemini-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        .gemini-link:hover {
+            background-color: #2980b9;
+        }
+
+        .prompt-container {
+            margin-top: 20px;
+        }
+
+        .prompt-text {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+            font-family: monospace;
+        }
+
+        .copy-button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .copy-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Sistemas Operacionais - Exercícios</h1>
+
+            <div class="aula">
+                <h2>Aula 1</h2>
+
+                <div class="pergunta">1. Discuta a importância dos sistemas operacionais para o funcionamento de um
+                    computador.
+                    Quais são os principais desafios que os desenvolvedores de sistemas operacionais enfrentam?</div>
+                <div class="resposta">
+                    Os sistemas operacionais são essenciais para gerenciar os recursos de hardware, fornecer uma
+                    interface
+                    para
+                    os programas de usuário e garantir segurança e isolamento entre processos. Entre os desafios
+                    enfrentados
+                    pelos desenvolvedores estão a sincronização de processos concorrentes, gerenciamento de memória
+                    eficiente,
+                    segurança contra acessos maliciosos e escalabilidade em sistemas multiprocessados.
+                </div>
+
+                <div class="pergunta">2. Compare e contraste os diferentes tipos de sistemas operacionais mencionados no
+                    texto.
+                    Qual tipo de sistema operacional você acha mais adequado para o seu uso pessoal? Por quê?</div>
+                <div class="resposta">
+                    O livro descreve sistemas de tempo compartilhado, sistemas embarcados, sistemas de tempo real,
+                    sistemas
+                    de
+                    propósito geral e sistemas distribuídos. Para uso pessoal, os sistemas de propósito geral (como
+                    Windows,
+                    Linux e macOS) são mais adequados, pois equilibram funcionalidades interativas, multimídia e suporte
+                    a
+                    aplicativos diversos.
+                </div>
+
+                <div class="pergunta">3. Considerando os sistemas operacionais atuais, cite a principal função de um
+                    sistema
+                    operacional em um computador moderno.</div>
+                <div class="resposta">
+                    Fornecer abstrações sobre o hardware e gerenciar recursos como CPU, memória, dispositivos de E/S e
+                    arquivos.
+                </div>
+
+                <div class="pergunta">4. Quais são as principais características da hierarquia de memória em um sistema
+                    computacional?</div>
+                <div class="resposta">
+                    Organizada por níveis de velocidade, capacidade e custo — de registradores, cache, RAM até
+                    armazenamento
+                    secundário e terciário. O SO deve gerenciar eficientemente o uso entre esses níveis.
+                </div>
+
+                <div class="pergunta">5. Qual é a importância dos dispositivos de entrada e saída (E/S) em um sistema
+                    operacional?</div>
+                <div class="resposta">
+                    Permitem a comunicação entre o computador e o ambiente externo. O SO gerencia esses dispositivos via
+                    controladores e drivers, organizando as operações de entrada e saída e tratando interrupções.
+                </div>
+            </div>
+
+            <div class="aula">
+                <h2>Aula 2</h2>
+
+                <div class="pergunta">1. Qual é a importância da exclusão mútua no contexto de processos e threads? Dê
+                    exemplos
+                    de situações em que a falta de exclusão mútua pode levar a problemas graves.</div>
+                <div class="resposta">
+                    Garante que apenas um processo por vez acesse uma região crítica, evitando inconsistências. Exemplo:
+                    dois
+                    processos imprimindo simultaneamente no mesmo arquivo de spool causariam corrupção de dados.
+                </div>
+
+                <div class="pergunta">2. Explique as diferenças entre implementar threads no espaço do usuário e no
+                    núcleo
+                    do
+                    sistema operacional. Quais são as vantagens e desvantagens de cada abordagem?</div>
+                <div class="resposta">
+                    Threads no espaço do usuário são rápidos e independentes do SO, mas bloqueiam o processo inteiro em
+                    chamadas
+                    de sistema. Threads no núcleo são gerenciados pelo SO, com melhor controle sobre E/S bloqueante, mas
+                    custam
+                    mais desempenho.
+                </div>
+
+                <div class="pergunta">3. Como os semáforos e mutexes são utilizados para garantir a exclusão mútua em
+                    sistemas
+                    concorrentes? Forneça exemplos de situações em que essas primitivas são aplicáveis.</div>
+                <div class="resposta">
+                    Semáforos controlam recursos via contadores; mutexes são usados para exclusão mútua pura. Exemplo:
+                    controle
+                    de acesso a uma fila de impressão (mutex) e número de conexões simultâneas a um servidor (semáforo).
+                </div>
+
+                <div class="pergunta">4. Quais são as principais estratégias de escalonamento em sistemas operacionais?
+                    Explique
+                    como cada uma delas funciona e em quais contextos são mais adequadas.</div>
+                <div class="resposta">
+                    Incluem FIFO, prioridade, escalonamento circular, por múltiplas filas e escalonamento garantido.
+                    Cada
+                    uma é
+                    adequada conforme prioridade de processos, interatividade ou processamento em lote.
+                </div>
+
+                <div class="pergunta">5. Explique o problema clássico do jantar dos filósofos e como ele ilustra os
+                    desafios
+                    de
+                    sincronização em sistemas concorrentes.</div>
+                <div class="resposta">
+                    Cinco filósofos precisam de dois garfos para comer. Se todos pegarem o garfo da esquerda
+                    simultaneamente,
+                    ocorre impasse. O problema ilustra os desafios de sincronização e deadlock em sistemas concorrentes.
+                </div>
+            </div>
+
+            <div class="aula">
+                <h2>Aula 3</h2>
+
+                <div class="pergunta">1. Explique por que o gerenciamento de memória torna-se crucial em sistemas
+                    operacionais,
+                    considerando o crescimento dos programas em relação à capacidade de memória dos computadores.</div>
+                <div class="resposta">
+                    Programas cada vez maiores exigem estratégias para alocar, proteger e compartilhar memória de forma
+                    eficiente. Sem isso, haveria desperdício e conflitos de memória.
+                </div>
+
+                <div class="pergunta">2. Quais são as vantagens e desvantagens da abordagem de abstração de espaços de
+                    endereçamento no gerenciamento da memória em sistemas operacionais?</div>
+                <div class="resposta">
+                    Permite que cada processo tenha um espaço de endereçamento separado. Vantagem: isolamento e
+                    segurança.
+                    Desvantagem: sobrecarga no gerenciamento de tabelas de páginas e memória virtual.
+                </div>
+
+                <div class="pergunta">3. Explique como o conceito de swapping é usado para lidar com a limitação da
+                    memória
+                    física do computador nos sistemas operacionais.</div>
+                <div class="resposta">
+                    Técnica de mover processos da memória para o disco e vice-versa para liberar espaço. Essencial em
+                    ambientes
+                    multiprogramados para manter o sistema responsivo.
+                </div>
+
+                <div class="pergunta">4. Compare e explique as diferentes abordagens para gerenciar a memória livre em
+                    sistemas
+                    operacionais.</div>
+                <div class="resposta">
+                    Pode ser feito via listas encadeadas, bitmaps ou sistemas de alocação de blocos. Abordagens variam
+                    em
+                    complexidade e velocidade de alocação e liberação.
+                </div>
+
+                <div class="pergunta">5. Por que os algoritmos de substituição de páginas são essenciais na gestão da
+                    memória
+                    virtual, e cite alguns exemplos de algoritmos de controle de página?</div>
+                <div class="resposta">
+                    Essenciais para decidir quais páginas remover da memória. Exemplos: FIFO, LRU, e Algoritmo Ótimo
+                    (teórico).
+                </div>
+            </div>
+
+            <div class="aula">
+                <h2>Aula 4</h2>
+
+                <div class="pergunta">1. O que significa fragmentação e como ela afeta a performance do sistema de
+                    arquivos.
+                </div>
+                <div class="resposta">
+                    Espaço de armazenamento desperdiçado devido a alocações e liberações. Fragmentação interna (espaço
+                    não
+                    usado
+                    dentro de um bloco) e externa (espaços livres espalhados) afetam a performance.
+                </div>
+
+                <div class="pergunta">2. Realize uma análise comparativa detalhada entre os sistemas de arquivos NTFS
+                    (Windows)
+                    e ext4 (Linux), destacando suas principais características.</div>
+                <div class="resposta">
+                    NTFS (Windows): journaling completo, permissões avançadas, compressão e criptografia. ext4 (Linux):
+                    journaling opcional, excelente performance para arquivos pequenos, e compatibilidade retroativa com
+                    ext3/ext2.
+                </div>
+
+                <div class="pergunta">3. Compare e diferencie os principais métodos de alocação de arquivos (contígua,
+                    encadeada
+                    e tabela) em relação à fragmentação, acesso aleatório e eficiência na utilização do espaço em disco.
+                </div>
+                <div class="resposta">
+                    - Contígua: rápido, propenso à fragmentação.<br>
+                    - Encadeada: flexível, acesso sequencial rápido, aleatório lento.<br>
+                    - Tabela (FAT): tabela no início do disco aponta para blocos — bom para sistemas pequenos, mas
+                    escala
+                    mal.
+                </div>
+            </div>
+
+            <div class="aula">
+                <h2>Aula 5</h2>
+
+                <div class="pergunta">1. Diferencie os dispositivos de E/S de bloco e de caractere, fornecendo exemplos
+                    de
+                    cada
+                    tipo.</div>
+                <div class="resposta">
+                    Bloco: acessam dados em blocos (discos rígidos). Caractere: acessam dados um caractere por vez
+                    (teclado,
+                    mouse).
+                </div>
+
+                <div class="pergunta">2. Como ocorrem erros na transmissão em dispositivos de entrada e saída?</div>
+                <div class="resposta">
+                    Podem ocorrer por falhas físicas, interferência ou bugs. SO detecta via códigos de status retornados
+                    pelos
+                    dispositivos e controladores de E/S.
+                </div>
+
+                <div class="pergunta">3. Cite e compare os três métodos principais de mapeamento de E/S na memória,
+                    informando
+                    as vantagens e desvantagens de cada um deles.</div>
+                <div class="resposta">
+                    - Mapeamento em memória: usa endereços de memória normais para acessar dispositivos.<br>
+                    - E/S isolada: portas de E/S específicas.<br>
+                    - Mapeamento de E/S direto (DMA): transfere dados direto entre memória e dispositivo.<br>
+                    DMA é rápido, evita sobrecarga na CPU.
+                </div>
+
+                <div class="pergunta">4. Qual é a função do controlador do dispositivo e como ocorre a comunicação entre
+                    o
+                    dispositivo e a CPU?</div>
+                <div class="resposta">
+                    Intermedia entre dispositivo e CPU, recebendo comandos e relatando status. Comunicação ocorre via
+                    interrupções e DMA para maior eficiência.
+                </div>
+            </div>
+        </div>
+
+        <div class="AI">
+            <h2>Insira esse pronpt abaixo:</h2>
+            <code>
+                Assuma o papel de um professor especialista em Sistemas Operacionais com base no livro _Sistemas Operacionais Modernos_, 5ª edição, de Andrew S. Tanenbaum e Herbert Bos. Responda às minhas dúvidas, explique conceitos com clareza, ofereça exemplos práticos quando necessário e relacione as respostas ao conteúdo do livro sempre que possível. Adote uma abordagem didática, como se estivesse ensinando a um aluno de graduação.
+            </code>
+
+            <iframe src="https://gemini.google.com/app" width="100%" height="600" style="border: none;">
+            </iframe>
+        </div>
+    </div>
+</body>
+
+</html>

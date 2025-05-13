@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exemplo de Métodos JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1>Exemplo de Métodos JavaScript</h1>
+
+    <button onclick="exibirAlert()">Exibir Alert</button>
+
+    <button onclick="exibirConfirm()">Exibir Confirm</button>
+
+    <button onclick="exibirPrompt()">Exibir Prompt</button>
+
+    <button onclick="escreverDocumento()">Escrever no Documento</button>
+
+    <button onclick="registrarLog()">Registrar Log</button>
+
+    <button onclick="registrarWarn()">Registrar Warn</button>
+
+    <button onclick="registrarError()">Registrar Error</button>
+
+    <code><pre>
+&ltscript&gt
+
+        // Função para exibir um alert
+
+        function exibirAlert() {
+
+            window.alert('Esta é uma mensagem de alerta!');
+
+        }
+
+        // Função para exibir uma confirmação
+
+        function exibirConfirm() {
+
+            var confirmacao = window.confirm('Você deseja continuar?');
+
+            if (confirmacao) {
+
+                alert('Você pressionou OK');
+
+            } else {
+
+                alert('Você pressionou Cancelar');
+
+            }
+
+        }
+
+        // Função para exibir um prompt
+
+        function exibirPrompt() {
+
+            var texto = window.prompt('Por favor, insira seu nome:');
+
+            if (texto !== null) {
+
+                alert('Olá, ' + texto + '!');
+
+            } else {
+
+                alert('Nenhum nome foi inserido.');
+
+            }
+
+        }
+
+        // Função para escrever no documento
+
+        function escreverDocumento() {
+
+            document.write('&ltp&gtEste texto foi adicionado ao documento usando document.write&lt/p&gt');
+
+        }
+
+        // Função para registrar um log no console
+
+        function registrarLog() {
+
+            console.log('Esta é uma mensagem de log.');
+
+        }
+
+        // Função para registrar um aviso (warn) no console
+
+        function registrarWarn() {
+
+            console.warn('Esta é uma mensagem de aviso (warn).');
+
+        }
+
+        // Função para registrar um erro no console
+
+        function registrarError() {
+
+            console.error('Esta é uma mensagem de erro.');
+
+        }
+
+    &lt/script&gt
+    </pre></code>
+    <h2>Métodos mais utilizados</h2>
+    <p><strong>window.alert</strong> abre uma caixa de diálogo para mensagens (botão ok)</p>
+    <p><strong>window.confirm</strong> exibe uma caixa de diálogo para confirmação (Ok/Cancelar)</p>
+    <p><strong>window.prompt</strong> exibe uma caixa de diálogo para entrada de texto</p>
+    <p><strong>document.write</strong> adiciona conteúdo no documento HTML</p>
+    <p><strong>console.log</strong> registra conteúdo de log no console do navegador</p>
+    <p><strong>console.warn</strong> registra mensagem de warning no console do navegador</p>
+    <p><strong>console.error</strong> registra mensagem de erro no console do navegador</p>
+    <script>
+
+        // Função para exibir um alert
+
+        function exibirAlert() {
+
+            window.alert('Esta é uma mensagem de alerta!');
+
+        }
+
+        // Função para exibir uma confirmação
+
+        function exibirConfirm() {
+
+            var confirmacao = window.confirm('Você deseja continuar?');
+
+            if (confirmacao) {
+
+                alert('Você pressionou OK');
+
+            } else {
+
+                alert('Você pressionou Cancelar');
+
+            }
+
+        }
+
+        // Função para exibir um prompt
+
+        function exibirPrompt() {
+
+            var texto = window.prompt('Por favor, insira seu nome:');
+
+            if (texto !== null) {
+
+                alert('Olá, ' + texto + '!');
+
+            } else {
+
+                alert('Nenhum nome foi inserido.');
+
+            }
+
+        }
+
+        // Função para escrever no documento
+
+        function escreverDocumento() {
+
+            document.write('<p>Este texto foi adicionado ao documento usando document.write</p>');
+
+        }
+
+        // Função para registrar um log no console
+
+        function registrarLog() {
+
+            console.log('Esta é uma mensagem de log.');
+
+        }
+
+        // Função para registrar um aviso (warn) no console
+
+        function registrarWarn() {
+
+            console.warn('Esta é uma mensagem de aviso (warn).');
+
+        }
+
+        // Função para registrar um erro no console
+
+        function registrarError() {
+
+            console.error('Esta é uma mensagem de erro.');
+
+        }
+
+    </script>
+
+</body>
+
+</html>

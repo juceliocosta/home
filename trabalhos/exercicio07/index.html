@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exemplo de Objetos JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1>Exemplo de Objetos JavaScript</h1>
+
+    <p id="window-info"></p>
+
+    <p id="navigator-info"></p>
+
+    <p id="document-info"></p>
+
+
+    <code><pre>
+    &ltscript&gt
+
+        // Usando o objeto window para obter as dimensões da janela
+
+        var windowWidth = window.innerWidth;
+
+        var windowHeight = window.innerHeight;
+
+        document.getElementById('window-info').textContent =
+
+            'Dimensões da janela: ' + windowWidth + 'x' + windowHeight;      
+
+        // Usando o objeto navigator para obter informações do navegador
+
+        var browserLanguage = navigator.language;
+
+        var userAgent = navigator.userAgent;
+
+        document.getElementById('navigator-info').textContent =
+
+            'Idioma do navegador: ' + browserLanguage + ', User Agent: ' + userAgent;
+
+        // Usando o objeto document para manipular o DOM
+
+        var documentTitle = document.title;
+
+        document.getElementById('document-info').textContent =
+
+            'Título do documento: ' + documentTitle;
+
+        // Ação ao carregar a página
+
+        window.onload = function() {
+
+            alert('A página foi carregada completamente!');
+
+        };
+
+    &lt/script&gt
+    </pre></code>
+
+    <script>
+
+        // Usando o objeto window para obter as dimensões da janela
+
+        var windowWidth = window.innerWidth;
+
+        var windowHeight = window.innerHeight;
+
+        document.getElementById('window-info').textContent =
+
+            'Dimensões da janela: ' + windowWidth + 'x' + windowHeight;      
+
+// Usando o objeto navigator para obter informações do navegador
+
+        var browserLanguage = navigator.language;
+
+        var userAgent = navigator.userAgent;
+
+        document.getElementById('navigator-info').textContent =
+
+            'Idioma do navegador: ' + browserLanguage + ', User Agent: ' + userAgent;
+
+        // Usando o objeto document para manipular o DOM
+
+        var documentTitle = document.title;
+
+        document.getElementById('document-info').textContent =
+
+            'Título do documento: ' + documentTitle;
+
+        // Ação ao carregar a página
+
+        window.onload = function() {
+
+            alert('A página foi carregada completamente!');
+
+        };
+
+    </script>
+
+</body>
+
+</html>
+

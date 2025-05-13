@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos de Eventos em JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    input, button {
+      padding: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exemplos de Eventos com JavaScript</h1>
+
+  <!-- Evento de Teclado -->
+  <section>
+    <h2>Evento de Teclado</h2>
+    <input type="text" id="campoTexto" placeholder="Digite algo aqui">
+    <p id="saidaTeclado"></p>
+  </section>
+
+  <!-- Evento de Janela -->
+  <section>
+    <h2>Evento de Janela (Resize)</h2>
+    <p id="dimensoesJanela"></p>
+  </section>
+
+  <!-- Evento de Formulário -->
+  <section>
+    <h2>Evento de Formulário</h2>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="mensagemFormulario"></p>
+  </section>
+
+  <script>
+    // Evento de Teclado
+    const campoTexto = document.getElementById('campoTexto');
+    const saidaTeclado = document.getElementById('saidaTeclado');
+
+    campoTexto.addEventListener('keydown', function(event) {
+      saidaTeclado.textContent = `Você pressionou: ${event.key}`;
+    });
+
+    // Evento de Janela
+    const dimensoesJanela = document.getElementById('dimensoesJanela');
+
+    function atualizarDimensoes() {
+      dimensoesJanela.textContent = `Largura: ${window.innerWidth}px | Altura: ${window.innerHeight}px`;
+    }
+
+    window.addEventListener('resize', atualizarDimensoes);
+    atualizarDimensoes(); // mostrar dimensões iniciais
+
+    // Evento de Formulário
+    const formulario = document.getElementById('formulario');
+    const mensagemFormulario = document.getElementById('mensagemFormulario');
+
+    formulario.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      mensagemFormulario.textContent = `Olá, ${nome}! Formulário enviado com sucesso.`;
+    });
+  </script>
+</body>
+</html>

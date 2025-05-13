@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Formulário de Login</title>
+
+</head>
+
+<body>
+
+<h2>Formulário de Login</h2>
+
+<form id="loginForm" onsubmit="return validateForm()">
+
+    <label for="username">Nome de Usuário ou Email:</label>
+
+    <input type="text" id="username" name="username" >
+
+    <label for="password">Senha:</label>
+
+    <input type="password" id="password" name="password" >
+
+    <input type="submit" value="Login">
+
+</form>
+
+<p id="error-msg" style="color: red;"></p>
+
+</body>
+
+</html>
+
+<script>
+
+function validateForm() {
+
+    var username = document.getElementById('username');
+
+    var password = document.getElementById('password');
+
+    var errorMsg = document.getElementById('error-msg');
+
+    // Simulando validação no lado do cliente
+
+    if (username.value === "" && password.value === "") {
+
+        errorMsg.innerText = "Por favor, preencha todos os campos.";
+
+        return false;
+
+    }
+
+    else if (username.value === "") {
+
+        errorMsg.innerText = "Por favor, preencha o nome de usuário.";
+        password.value = "";
+
+        return false;
+
+    }
+
+    else if (password.value === "") {
+
+        errorMsg.innerText = "Por favor, preencha a sua senha.";
+        username.value = "";
+
+        return false;
+
+    }
+
+    // Se todas as validações passarem, o formulário será enviado
+    alert("Usuário logado com sucesso!  ")
+    return true;
+
+}
+
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Exemplo de Eventos de Mouse</title>
+
+    <style>
+
+        #meuBotao {
+
+            padding: 10px 20px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Exemplo de Eventos de Mouse</h1>
+
+    <button id="meuBotao">Passe o mouse ou clique</button>
+
+<code><pre>
+&ltscript&gt
+
+        // Seleciona o botão pelo seu ID
+
+        var botao = document.getElementById('meuBotao');
+
+        // Adiciona um ouvinte de evento para o evento 'mouseover'
+
+        botao.addEventListener('mouseover', function() {
+
+            botao.style.backgroundColor = 'lightblue';
+
+            botao.textContent = 'Mouse está aqui!';
+
+        });
+
+        // Adiciona um ouvinte de evento para o evento 'mouseout'
+
+        botao.addEventListener('mouseout', function() {
+
+            botao.style.backgroundColor = '';
+
+            botao.textContent = 'Passe o mouse ou clique';
+
+        });
+
+        // Adiciona um ouvinte de evento para o evento 'click'
+
+        botao.addEventListener('click', function() {
+
+            alert('Botão clicado!');
+
+        });
+
+    &lt/script&gt
+</pre></code>
+
+    <script>
+
+        // Seleciona o botão pelo seu ID
+
+        var botao = document.getElementById('meuBotao');
+
+        // Adiciona um ouvinte de evento para o evento 'mouseover'
+
+        botao.addEventListener('mouseover', function() {
+
+            botao.style.backgroundColor = 'lightblue';
+
+            botao.textContent = 'Mouse está aqui!';
+
+        });
+
+        // Adiciona um ouvinte de evento para o evento 'mouseout'
+
+        botao.addEventListener('mouseout', function() {
+
+            botao.style.backgroundColor = '';
+
+            botao.textContent = 'Passe o mouse ou clique';
+
+        });
+
+        // Adiciona um ouvinte de evento para o evento 'click'
+
+        botao.addEventListener('click', function() {
+
+            alert('Botão clicado!');
+
+        });
+
+    </script>
+
+</body>
+
+</html>

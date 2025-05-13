@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Função JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1>Exemplo de Função JavaScript</h1>
+
+    &ltp id="texto"&gt<span id="texto">Este é o texto original.</span>&lt/p&gt <br><br>
+
+    &ltbutton onclick="mudarTexto()"&gt<button onclick="mudarTexto()">Clique aqui para mudar o texto</button>&lt/button&gt
+<code><pre>
+    &ltscript&gt
+        // Função que muda o texto do parágrafo
+        function mudarTexto() {
+            document.getElementById('texto').innerText = 'O texto foi alterado!';
+        }
+    &lt/script&gt
+</pre></code>
+
+<h2>Eventos mais utilizados</h2>
+
+<h3>Eventos de Mouse:</h3>
+
+<p>click: Disparado quando um elemento é clicado.</p>
+
+<p>dblclick: Disparado quando um elemento é clicado duas vezes rapidamente.</p>
+
+<p>mouseover: Disparado quando o ponteiro do mouse passa sobre um elemento.</p>
+
+<p>mouseout: Disparado quando o ponteiro do mouse sai de um elemento.</p>
+
+<h3>Eventos de Teclado:</h3>
+
+<p>keydown: Disparado quando uma tecla é pressionada.</p>
+
+<p>keyup: Disparado quando uma tecla é liberada.</p>
+
+<p>keypress: Disparado quando uma tecla é pressionada e liberada.</p>
+
+<h3>Eventos de Janela:</h3>
+
+<p>load: Disparado quando uma página é carregada.</p>
+
+<p>resize: Disparado quando o tamanho da janela é alterado.</p>
+
+<p>scroll: Disparado quando a página é rolada.</p>
+
+<h3>Eventos de Formulário:</h3>
+
+<p>submit: Disparado quando um formulário é enviado.</p>
+
+<p>change: Disparado quando o valor de um elemento de formulário é alterado.</p>
+
+<p>focus: Disparado quando um elemento ganha foco.</p>
+
+<p>blur: Disparado quando um elemento perde foco.</p>
+
+    <script>
+
+        // Função que muda o texto do parágrafo
+
+        function mudarTexto() {
+
+            document.getElementById('texto').innerText = 'O texto foi alterado!';
+
+        }
+
+    </script>
+
+</body>
+
+</html>
