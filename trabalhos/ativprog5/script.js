@@ -13,8 +13,12 @@ document.querySelectorAll("h2")
 .forEach((elemento)=>{
     elemento.addEventListener("click", ()=>{
         let el = elemento.nextElementSibling;
+        
         while(el){
             el.style.display = "none";
+            if(el.getAttribute('href') === "experiencia.html"){
+                el.style.display = "block";
+            }
             el = el.nextElementSibling;
         }
     })
