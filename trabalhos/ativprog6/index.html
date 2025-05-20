@@ -12,43 +12,49 @@
     <main class="container">
         <h1>Cadastro de Cliente</h1>
         <form action="cadastraCliente.php" method="post">
-            
+
+            <fieldset>
+                <legend>Crie seu login</legend>
+
+                <label for="usuario">Usuário: </label>
+                <input class="input-group" type="text" name="usuario" id="usuario" minlength="2" maxlength="50" autofocus >
+
+                <label for="senha">Senha: </label>
+                <input class="input-group" type="password" name="senha" id="senha" minlength="8" maxlength="50" >
+
+            </fieldset>
+
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
                 <label for="nome">Nome: </label>
-                <input class="input-group" type="text" name="nome" id="nome" minlength="2" maxlength="50" autofocus >
+                <input class="input-group" type="text" name="nome" id="nome" minlength="2" maxlength="50">
 
                 <label for="email">E-mail: </label>
-                <input class="input-group" type="email" name="email" id="email" >
+                <input class="input-group" type="email" name="email" id="email">
 
                 <label for="cpf">CPF: </label>
-                <input class="input-group" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" >
+                <input class="input-group" type="text" name="cpf" id="cpf" maxlength="14"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
 
                 <label for="idade">Idade: </label>
-                <input class="input-group" type="number" name="idade" id="idade"  min="1" max="150">
+                <input class="input-group" type="number" name="idade" id="idade" min="1" max="150">
 
                 <label for="tel">Telefone: </label>
-                <input class="input-group" type="tel" name="tel" id="tel" >
+                <input class="input-group" type="tel" name="tel" id="tel" maxlength="15">
 
                 <label for="data">Data de nascimento: </label>
                 <input class="input-group" type="date" name="data" id="data">
-                
+
                 <label for="sexo">Sexo: </label>
-                <!--
-                <input class="input-group" type="radio" name="sexo" id="masculino" value="Masculino">
-                <label for="masculino">Masculino</label>
-                <input class="input-group" type="radio" name="sexo" id="feminino" value="Feminino">
-                <label for="feminino">Feminino</label>
-                -->
-                <select class="input-group"id="sexo" name="sexo">
+                <select class="input-group" id="sexo" name="sexo">
                     <option value="" disabled selected>Selecione</option>
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
                 </select>
-                
+
                 <label for="estado-civil">Estado civil: </label>
-                <select class="input-group"id="estado-civil" name="estado-civil">
+                <select class="input-group" id="estado-civil" name="estado-civil">
                     <option value="" disabled selected>Selecione</option>
                     <option value="solteiro">Solteiro(a)</option>
                     <option value="casado">Casado(a)</option>
@@ -61,17 +67,9 @@
                 <legend>Endereço de Entrega</legend>
 
                 <label for="cep">CEP: </label>
-                <input class="input-group" type="text" name="cep" id="cep" >
-                <label for="tipo-logradouro">Tipo de logradouro: </label>
+                <input class="input-group" type="text" name="cep" id="cep">
 
-                <!--
-                    <input class="input-group" type="radio" id="rua" name="tipo-logradouro" >
-                    <label for="rua">Rua</label>
-                    <input class="input-group" type="radio" id="avenida" name="tipo-logradouro" >
-                    <label for="avenida">Avenida</label>
-                    <input class="input-group" type="radio" id="praca" name="tipo-logradouro" >
-                    <label for="praca">Praça</label>
-                -->
+                <label for="tipo-logradouro">Tipo de logradouro: </label>
                 <select class="input-group" id="tipo-logradouro" name="tipo-logradouro">
                     <option value="" disabled selected>Selecione</option>
                     <option value="Rua">Rua</option>
@@ -79,13 +77,16 @@
                     <option value="Praca">Praça</option>
                 </select>
 
-                
+
                 <label for="logradouro">Logradouro: </label>
-                <input class="input-group" type="text" name="logradouro" id="logradouro" >
+                <input class="input-group" type="text" name="logradouro" id="logradouro">
+
                 <label for="bairro">Bairro: </label>
-                <input class="input-group" type="text" name="bairro" id="bairro" >
+                <input class="input-group" type="text" name="bairro" id="bairro">
+
                 <label for="cidade">Cidade: </label>
-                <input class="input-group" type="text" name="cidade" id="cidade" >
+                <input class="input-group" type="text" name="cidade" id="cidade">
+
                 <label for="estado">Estado: </label>
                 <select class="input-group" id="estado" name="estado">
                     <option value="" disabled selected>Selecione</option>
@@ -117,6 +118,7 @@
                     <option value="SP">São Paulo</option>
                     <option value="TO">Tocantins</option>
                 </select>
+
                 <input class="input-group" type="text" name="usuario" value="Usuário" hidden disabled>
             </fieldset>
 
@@ -124,18 +126,6 @@
                 <legend>Informações Adicionais</legend>
 
                 <label>Interesses: </label>
-                <!--
-                    <input class="input-group" type="checkbox" id="filmes" name="interesse">
-                    <label for="filmes">Filmes</label>
-                    <input class="input-group" type="checkbox" id="informatica" name="interesse">
-                    <label for="informatica">Informática</label>
-                    <input class="input-group" type="checkbox" id="games" name="interesse">
-                    <label for="games">Games</label>
-                    <input class="input-group" type="checkbox" id="livros" name="interesse">
-                    <label for="livros">Livros</label>
-                    <input class="input-group" type="checkbox" id="roupas" name="interesse">
-                    <label for="roupas">Roupas</label>
-                -->
                 <select class="input-group" name="interesses" id="interesses" multiple size="4">
                     <option>Filmes</option>
                     <option>Informática</option>
@@ -143,17 +133,20 @@
                     <option>Livros</option>
                     <option>Esportes</option>
                 </select>
+
                 <label for="complemento">Complemento: </label>
                 <textarea class="input-group" name="complemento" id="complemento"></textarea>
+
                 <label for="anexo">Anexo: </label>
                 <input class="input-group" type="file" name="anexo" id="anexo">
             </fieldset>
 
-            <input class="input-group" type="hidden" name="dados" id="dados">
+            <input class="input-group" name="dados" id="dados" hidden>
             <button type="submit">Enviar</button>
         </form>
     </main>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
