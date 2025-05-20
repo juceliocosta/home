@@ -16,15 +16,42 @@ function lidarComEnvio() {
             const label = input.previousElementSibling;
 
             const span = label.querySelector('span');
-            if (input.value.trim() === "" && !span) {
-                label.innerHTML += "<span> requerido *</span>";
-            }
             if (input.value.trim() !== "" && span) {
                 span.remove();
+            }
+            if (input.value.trim() === "" && !span) {
+                label.innerHTML += "<span> requerido</span>";
+            }
+
+            //span sobre validação da senha
+            if (input.getAttribute("id") === "senha"){
+                if (!validarSenha(input.value)){//se senha inválida
+                    label.innerHTML += "<span> deve conter: números, letras, símbolos e ser maior que 8 caracteres. *</span>";
+                }
+                if (input.value.trim() === "" && span){
+                    label.querySelectorAll('span').forEach(span=>{span.remove()});
+                    label.innerHTML += "<span> requerido</span>";
+                }               
+            }
+            
+            //span sobre validação do Usuário
+            if (input.getAttribute("id") === "usuario"){
+                if (input.value.length <= 5){//se menor que 6
+                    label.innerHTML += "<span> deve conter mais de 5 caracteres</span>";
+                }
+                if (input.value.trim() === "" && span){
+                    label.querySelectorAll('span').forEach(span=>{span.remove()});
+                    label.innerHTML += "<span> requerido</span>";
+                }               
             }
         })
 
     });
+}
+
+function validarSenha(senha) {
+  const regex = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9\s]).{5,}$/;
+  return regex.test(senha);
 }
 
 function aplicarMascaraEmCPF() {

@@ -12,15 +12,15 @@
     <main class="container">
         <h1>Cadastro de Cliente</h1>
         <form action="cadastraCliente.php" method="post">
-
+            <div class="validacao"></div>
             <fieldset>
                 <legend>Crie seu login</legend>
 
                 <label for="usuario">Usuário: </label>
-                <input class="input-group" type="text" name="usuario" id="usuario" minlength="2" maxlength="50" autofocus >
+                <input class="input-group" type="text" name="usuario" id="usuario" maxlength="50" autofocus >
 
                 <label for="senha">Senha: </label>
-                <input class="input-group" type="password" name="senha" id="senha" minlength="8" maxlength="50" >
+                <input class="input-group" type="password" name="senha" id="senha" maxlength="50" >
 
             </fieldset>
 
@@ -28,7 +28,7 @@
                 <legend>Dados Pessoais</legend>
 
                 <label for="nome">Nome: </label>
-                <input class="input-group" type="text" name="nome" id="nome" minlength="2" maxlength="50">
+                <input class="input-group" type="text" name="nome" id="nome" maxlength="50">
 
                 <label for="email">E-mail: </label>
                 <input class="input-group" type="email" name="email" id="email">
