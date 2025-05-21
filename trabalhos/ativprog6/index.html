@@ -16,10 +16,10 @@
             <fieldset>
                 <legend>Crie seu login</legend>
 
-                <label for="usuario">Usuário: </label>
+                <label for="usuario">Usuário: *</label>
                 <input class="input-group" type="text" name="usuario" id="usuario" maxlength="50" autofocus >
 
-                <label for="senha">Senha: </label>
+                <label for="senha">Senha: *</label>
                 <input class="input-group" type="password" name="senha" id="senha" maxlength="50" >
 
             </fieldset>
@@ -27,20 +27,19 @@
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
-                <label for="nome">Nome: </label>
+                <label for="nome">Nome: *</label>
                 <input class="input-group" type="text" name="nome" id="nome" maxlength="50">
 
-                <label for="email">E-mail: </label>
-                <input class="input-group" type="email" name="email" id="email">
+                <label for="email">E-mail: *</label>
+                <input class="input-group" type="text" name="email" id="email">
 
-                <label for="cpf">CPF: </label>
-                <input class="input-group" type="text" name="cpf" id="cpf" maxlength="14"
-                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                <label for="cpf">CPF: *</label>
+                <input class="input-group" type="text" name="cpf" id="cpf" maxlength="14">
 
-                <label for="idade">Idade: </label>
-                <input class="input-group" type="number" name="idade" id="idade" min="1" max="150">
+                <label for="idade">Idade: *</label>
+                <input class="input-group" type="number" name="idade" id="idade">
 
-                <label for="tel">Telefone: </label>
+                <label for="tel">Telefone: *</label>
                 <input class="input-group" type="tel" name="tel" id="tel" maxlength="15">
 
                 <label for="data">Data de nascimento: </label>
@@ -66,10 +65,10 @@
             <fieldset>
                 <legend>Endereço de Entrega</legend>
 
-                <label for="cep">CEP: </label>
+                <label for="cep">CEP: *</label>
                 <input class="input-group" type="text" name="cep" id="cep">
 
-                <label for="tipo-logradouro">Tipo de logradouro: </label>
+                <label for="tipo-logradouro">Tipo de logradouro: *</label>
                 <select class="input-group" id="tipo-logradouro" name="tipo-logradouro">
                     <option value="" disabled selected>Selecione</option>
                     <option value="Rua">Rua</option>
@@ -78,16 +77,16 @@
                 </select>
 
 
-                <label for="logradouro">Logradouro: </label>
+                <label for="logradouro">Logradouro: *</label>
                 <input class="input-group" type="text" name="logradouro" id="logradouro">
 
-                <label for="bairro">Bairro: </label>
+                <label for="bairro">Bairro: *</label>
                 <input class="input-group" type="text" name="bairro" id="bairro">
 
-                <label for="cidade">Cidade: </label>
+                <label for="cidade">Cidade: *</label>
                 <input class="input-group" type="text" name="cidade" id="cidade">
 
-                <label for="estado">Estado: </label>
+                <label for="estado">Estado: *</label>
                 <select class="input-group" id="estado" name="estado">
                     <option value="" disabled selected>Selecione</option>
                     <option value="AC">Acre</option>
@@ -147,6 +146,7 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="mascaras.js"></script>
 </body>
 
 </html>
