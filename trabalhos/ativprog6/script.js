@@ -26,7 +26,7 @@ function lidarComEnvio() {
             if(input.getAttribute("id") === "email"){
                 const emailValido = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                 emailInvalido = !emailValido.test(input.value);
-                inserirSpan(input, emailInvalido, envio, "<span>requer mais de 5 caracteres</span>");
+                inserirSpan(input, emailInvalido, envio, "<span>requer um email válido</span>");
             }
         })
     });

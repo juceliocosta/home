@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+}
+html {
+    scroll-padding-top: 100px;
+}
+.sobrepor {
+    margin-top: 100px;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+    background-color: rgba(39, 39, 39, 0.9);
+}
+
+.logo {
+    padding: 0px;
+}
+
+nav>ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+}
+
+nav a{
+    padding: 10px 6px;
+    font-weight: bolder;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: aquamarine;
+    color: black;
+    border-radius: 999px;
+    transition: 0.3s;
+}
+
+section {
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+
+.flex-wrap {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-evenly;
+}
+
+.perfil {
+    width: 50%;
+}
+
+
+h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+h2, h3 {
+    padding: 30px 0px 10px 0px;
+}
+h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+p {
+    padding: 20px;
+}
+
+.destaque {
+    font-variant:small-caps;
+    font-weight: bolder;
+    color: aquamarine;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.container>a{
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 20px 10px;
+    border-radius: 20px;
+    margin: 10px;
+    width: 180px;
+    height: 80px;
+    text-align: center;
+    border: 2px solid aquamarine;
+}
+
+.container>a:hover{
+    background-color: aquamarine;
+    color: black;
+    transition: 0.3s;
+}
+
+
+
+.descricao>li {
+    margin-left: 20px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid aquamarine;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+}
+
+
+@media (max-width: 700px) {
+    
+    .perfil{
+    width: 100%;
+    }
+    
+    .menu>li{
+        padding: 3px 0px;
+
+    }
+    .menu a {
+        padding: 3px;
+    }
+    #avatar {
+        width: 60%;
+    }
+    .container>a {
+        width: 130px;
+    }
+}
